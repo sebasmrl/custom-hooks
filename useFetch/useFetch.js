@@ -8,9 +8,7 @@ export const useFetch = (url) => {
         hasError:null 
     });
     
-    //console.log('Hey')
-
-    //function
+    //function getFetch
     const getFetch = async()=>{
         //reiniciar valores
         setState({
@@ -29,16 +27,6 @@ export const useFetch = (url) => {
     } 
 
     useEffect(() => {
-        /* setState({data:null, loading:true, hasError:null});
-        fetch( url )
-            .then(resp => resp.json())
-            .then( data =>{
-                setState({
-                    loading:false, 
-                    error:null, 
-                    data
-                });
-            }) */
         getFetch();  //eslint-disable-next-line
     }, [url]);  
 
